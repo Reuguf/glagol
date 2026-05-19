@@ -1,0 +1,32 @@
+Glagol 0.3 Stable
+
+Fixed:
+- Multi-line lists/dicts/parentheses now join before translation.
+- External variables changed inside actions/events now get global automatically.
+- GUI event errors are caught and shown instead of destroying the whole app.
+- File/json expressions inside variables and conditions are fixed.
+- Installer no longer uses the broken shell32 старый ошибочный вызов обновления проводника call.
+- CREATE_RELEASE no longer fails when examples folder is missing.
+- Setup cleans old installed files before copying new ones.
+
+Added:
+- GUI canvas/holoст commands: add canvas, draw rectangle, circle, text, clear canvas.
+- Big text/log field.
+- Cards/spacers for nicer windows.
+- Dark/light/purple themes.
+- Better examples: GUI, graphics, big panel, files/json, python bridge, multiline test.
+- Safe mode check.
+- Creation templates: console/window/graphics.
+- Test report.
+
+Language remains simple:
+- выведи
+- пусть ... будет
+- если / иначе
+- пока / повтори / для каждого
+- действие
+- когда нажата кнопка
+- запиши/прочитай файл
+- прочитай/запиши json
+- случайное число / случайный элемент
+- подключи python "module" как имя

@@ -1,0 +1,43 @@
+Glagol 0.3 Stable — self-test report
+Generated in ChatGPT sandbox.
+
+Scope:
+- Syntax check of glagol.py.
+- Translation + Python compile check for all bundled .гл examples.
+- Execution check for console/file/json/python-bridge examples.
+- Safe mode negative test.
+- Static check for the fixed global-variable bug in GUI/event code.
+
+Results:
+[OK] syntax: glagol.py
+[OK] translate+compile: hello.гл
+[OK] translate+compile: multiline_test.гл
+[OK] translate+compile: files_json.гл
+[OK] translate+compile: python_bridge.гл
+[OK] translate+compile: gui_test.гл
+[OK] translate+compile: graphics_demo.гл
+[OK] translate+compile: big_panel.гл
+[OK] execute: hello.гл
+     Привет из Глагола 0.3 | Привет, Glaox
+[OK] execute: multiline_test.гл
+     Сделай приложение заметок. | Сделай калькулятор. | Сделай красивое окно. | Счётчик: 2 | 10000 | 2097152
+[OK] execute: files_json.гл
+     Glaox | Привет из файла | JSON найден
+[OK] execute: python_bridge.гл
+     9.0 | 4.0
+[OK] safe mode blocks python bridge
+     Ошибка Глагола:
+Безопасный режим: запрещённая конструкция 'подключи python' в строке 1
+[OK] global fix for external variable
+     global нажатий found
+
+Passed: 14 / 14
+
+Important note:
+- GUI examples were translated and compiled, but not opened in the sandbox because this environment has no normal Windows desktop.
+- On Windows, run examples\gui_test.гл, examples\graphics_demo.гл, and examples\big_panel.гл to visually test GUI.
+
+Known limitations:
+- This is still a Python-backed language, not a full independent compiler.
+- It can use Python libraries through 'подключи python', but it does not rewrite every Python library into Russian.
+- Safe mode blocks obvious dangerous constructs, but it is not a perfect security sandbox.
